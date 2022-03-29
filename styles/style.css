@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+html ::-webkit-scrollbar {
+  color: var(--bg-color);
+}
+
+:root {
+  --heading-font: "Poppins", sans-serif !important;
+  --body-font: "Montserrat", sans-serif !important;
+  --bg-color: #5a6e79;
+  --radius: 0.5rem;
+}
+
+header nav .title h1 {
+  font-family: var(--heading-font) !important;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--bg-color);
+}
+
+header nav .navigation .d-flex {
+  gap: 4rem;
+}
+
+header nav .navigation .d-flex h2 {
+  font-size: 1rem;
+  font-family: var(--body-font);
+  font-weight: bold;
+  color: var(--bg-color);
+}
+
+header nav .search-icon .d-flex {
+  gap: 2rem;
+}
+
+header nav .search-icon .d-flex i {
+  font-size: 1.5rem;
+  color: var(--bg-color);
+}
+
+header nav .search-icon .d-flex :nth-child(2) {
+  font-size: 2.2rem;
+}
+
+.hero-section {
+  height: 100vh;
+  position: relative;
+}
+
+.hero-section img {
+  height: 35rem;
+  width: 60vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.hero-section .hero-description {
+  border-radius: 0 0.5rem 0.5rem 0;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  background: var(--bg-color);
+  color: #fdfdfe;
+  width: 35rem;
+}
+
+.hero-section .hero-description .description {
+  text-align: left;
+  padding-left: 7rem;
+}
+
+.hero-section .hero-description .description h1 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.6em;
+  font-size: 2.5rem !important;
+}
+
+.hero-section .hero-description .description p {
+  font-family: var(--body-font);
+}
+
+.hero-section .scroll-down {
+  position: absolute;
+  border-radius: var(--radius);
+  top: 30rem;
+  right: 17rem;
+  color: white;
+  background: var(--bg-color);
+}
+
+.hero-section .scroll-down::after {
+  content: "Scroll Down";
+  font-size: 1.1rem;
+  display: block;
+  width: 130px;
+  color: var(--bg-color);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  left: 10rem;
+  top: 0;
+  position: absolute;
+}
+
+.hero-section .scroll-down i {
+  font-size: 2rem;
+}
+
+.hero-section .behind-box {
+  position: absolute;
+  top: 30.5rem;
+  left: 17rem;
+  z-index: -1;
+  border: 3px solid var(--bg-color);
+  border-radius: 0.4rem;
+  width: 6rem;
+  height: 6rem;
+}
+
+.services {
+  position: relative;
+}
+
+.services h1 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.6em;
+  font-size: 2.5rem !important;
+  margin-left: 8rem !important;
+}
+
+.services h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 2px;
+  background: var(--bg-color);
+  left: 8rem;
+  top: 4.2rem;
+  position: absolute;
+}
+
+.services h2 {
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.services .d-flex {
+  gap: 2rem;
+}
+
+.services .d-flex i {
+  font-size: 2.5rem;
+  color: var(--bg-color);
+}
+
+.services .d-flex p {
+  font-family: var(--body-font);
+}
+
+.experience img {
+  height: 45rem;
+  width: 35vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--radius);
+  -webkit-box-shadow: rgba 0, 0, 0, var(--bg-color);
+          box-shadow: rgba 0, 0, 0, var(--bg-color);
+}
+
+.experience h1 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.6em;
+  font-size: 2.5rem !important;
+}
+
+.experience p {
+  font-family: var(--body-font);
+  font-weight: 600;
+  opacity: 0.6;
+  line-height: 1.9em;
+}
+/*# sourceMappingURL=style.css.map */
