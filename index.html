@@ -11,10 +11,15 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;500;600;800&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600;800&family=Secular+One&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./styles/stepper-styles.css">
+  <link rel="stylesheet" href="./styles/testimonial-styles.css">
+  <link rel="stylesheet" href="./styles/nav-styles.css">
+  <script defer src="./js/script.js"></script>
   <title>Luxterior</title>
 </head>
 
@@ -29,15 +34,15 @@
             </h1>
           </div>
         </div>
-        <div class="col-md-4 navigation">
-          <div class="d-flex flex-row align-items-center">
-            <h2>Home</h2>
-            <h2>About</h2>
-            <h2>Features</h2>
-            <h2>Contacts</h2>
+        <div class="col-md-5 navigation">
+          <div class="nav-items">
+            <a>Home</a>
+            <a>About</a>
+            <a>Features</a>
+            <a>Contacts</a>
           </div>
         </div>
-        <div class="col-md-4 search-icon">
+        <div class="col-md-3 search-icon">
           <div class="d-flex flex-row align-items-center justify-content-center">
             <i class="bi bi-search mb-3"></i>
             <i class="bi bi-filter-right mb-3"></i>
@@ -47,26 +52,40 @@
     </nav>
   </header>
   <section class="hero-section mt-5">
-    <div class="text-center">
-      <img src="./assets/hero-image.jpeg" alt="">
-      <div class="hero-description">
-        <div class="description container py-5">
-          <h1>We help you
-            <br>
-            make modern
-            <br>
-            interior
-          </h1>
-          <p>We will help you to make an elegant <br>
-            and luxurious interior designed by <br>
-            professional interior designers</p>
-        </div>
-      </div>
-      <div class="scroll-down px-5 py-4">
-        <i class="bi bi-arrow-down"></i>
-      </div>
-      <div class="behind-box"></div>
+    <div class="mySlides fade">
+      <img src="./assets/hero-image.jpeg" alt="hero-image">
     </div>
+    <div class="mySlides fade">
+      <img src="./assets/hero-image-two" alt="hero-image">
+    </div>
+    <div class="mySlides fade">
+      <img src="./assets/hero-image-third.jpg" alt="hero-image">
+    </div>
+    <div class="controls col">
+      <a class="prev p-4" onclick="plusSlides(-1)"><i class="bi bi-arrow-left"></i></a>
+      <a class="next" onclick="plusSlides(1)"><i class="bi bi-arrow-right"></i></a>
+    </div>
+    <div class="controls-number">
+      <p class="number-one mb-5">01</p>
+      <p>03</p>
+    </div>
+    <div class="hero-description">
+      <div class="description container py-5">
+        <h1>We help you
+          <br>
+          make modern
+          <br>
+          interior
+        </h1>
+        <p>We will help you to make an elegant <br>
+          and luxurious interior designed by <br>
+          professional interior designers</p>
+      </div>
+    </div>
+    <div class="scroll-down px-5 py-4">
+      <i class="bi bi-arrow-down"></i>
+    </div>
+    <div class="behind-box"></div>
   </section>
   <section class="services">
     <div class="container">
@@ -120,7 +139,7 @@
   </section>
 
   <section class="experience container my-5 py-5">
-    <div class="row">
+    <div class="row my-5">
       <div class="col-md-6">
         <img src="./assets/second-image.jpg" alt="">
       </div>
@@ -154,6 +173,213 @@
       </div>
     </div>
   </section>
+  <section class="stepper-section container my-5 py-3">
+    <div class="row my-5">
+      <div class="col-sm-6">
+        <h1>We provide the best <br>
+          process experience
+        </h1>
+        <div class="row container my-5 py-4 align-items-center">
+          <div class="col-md-2 container">
+            <div class="cirlce text-center">
+              <h2 class="p-3">01</h2>
+            </div>
+          </div>
+          <div class="col-md-10 brief-two container">
+            <div class="container">
+              <h1>Briefing</h1>
+            </div>
+          </div>
+          <div class="col-md-2 container brief-paragraph">
+            <div class="line text-center">
+            </div>
+          </div>
+          <div class="col-md-10 brief-two container brief-paragraph">
+            <div class="container">
+              <p>First thing you determine the concept and model you
+                want, then choose what colors and materials your
+                want to use in your furniture.</p>
+            </div>
+          </div>
+          <div class="col-md-2 container processing-section">
+            <div class="cirlce text-center">
+              <h2 class="p-3">02</h2>
+            </div>
+          </div>
+          <div class="col-md-10 brief-two container processing-section">
+            <div class="container">
+              <h1>Processing</h1>
+            </div>
+          </div>
+          <div class="col-md-2 container brief-paragraph">
+            <div class="line text-center">
+            </div>
+          </div>
+          <div class="col-md-10 brief-two container brief-paragraph">
+            <div class="container">
+              <p>When the briefing process is complete and what the client wants has been achieved. Then we carry out
+                the execution of the desired concept.</p>
+            </div>
+          </div>
+          <div class="col-md-2 container processing-section">
+            <div class="cirlce text-center">
+              <h2 class="p-3">03</h2>
+            </div>
+          </div>
+          <div class="col-md-10 brief-two container processing-section">
+            <div class="container">
+              <h1>Finishing</h1>
+            </div>
+          </div>
+          <div class="col-md-2 container brief-paragraph">
+          </div>
+          <div class="col-md-10 brief-two container brief-paragraph">
+            <div class="container">
+              <p>After the process is complete, we will immediately carry out the finishing stage and we do it carefully
+                and make sure there are no mistakes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <img src="./assets/third-image.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial-section container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <h1>What People Are Saying <br> About Us</h1>
+      </div>
+      <div class="col-md-4 text-center">
+        <i class="bi bi-arrow-left p-5"></i>
+        <i class="bi bi-arrow-right p-2"></i>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 my-5 py-4">
+        <div class="testimonial-container">
+          <div class="testimonial">
+            <div class="card container py-3 px-5">
+              <h1>"</h1>
+              <h2>The results given are very <br> satisfying</h2>
+              <div class="row my-4 align-items-center">
+                <div class="col-md-2">
+                  <img src="./assets/img_avatar.png" alt="Avatar" class="avatar">
+                </div>
+                <div class="col-md-10 pt-2">
+                  <h3>
+                    Ralph Edwards
+                  </h3>
+                  <h4>
+                    Product Manager
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="overlay">
+            <div class="text">
+              <p>"Being able to work with the exterior is an extraordinary thing very provide excellent service and the
+                results given are also very satisfying by giving elegant impression"</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6 my-5 py-4">
+        <div class="testimonial-container">
+          <div class="testimonial">
+            <div class="card container py-3 px-5">
+              <h1>"</h1>
+              <h2>The service provided is very <br> good and friendly</h2>
+              <div class="row my-4 align-items-center">
+                <div class="col-md-2">
+                  <img src="./assets/img_avatar2.png" alt="Avatar" class="avatar">
+                </div>
+                <div class="col-md-10 pt-2">
+                  <h3>
+                    Leslie Aleksander
+                  </h3>
+                  <h4>
+                    Software Developer
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="overlay">
+            <div class="text">
+              <p>"At that time I wanted to make a chair, then I went to <b>luxterior</b> to make the chair and after it
+                was finished the results were unexpected. The results given are in accordance with what I want."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="subscription-section my-5 py-4">
+    <div class="text-center">
+      <h1>
+        Subscribe to get the latest <br> news about us
+      </h1>
+      <p class="pt-2">We recommend you to subscribe to our newspaper, enter your <br> email below to get our daily
+        update about us.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container pt-5">
+      <div class="row py-5">
+        <div class="col-sm-4">
+          <div class="subscribe-wrapper">
+            <input class="px-5 py-4" type="text" placeholder="Enter your email address" />
+            <button class="px-5 py-3">Subscribe</button>
+          </div>
+          <h1>Luxterior</h1>
+          <p class="mt-4">We will help you to make and elegant and <br> luxurious interior designed by a <br>
+            professional interior
+            designer.
+          </p>
+        </div>
+        <div class="col-sm-2">
+          <h1>About</h1>
+          <p class="mt-4">About us</p>
+          <p>Features</p>
+          <p>News</p>
+          <p>Careers</p>
+        </div>
+        <div class="col-sm-2">
+          <h1>Company</h1>
+          <p class="mt-4">Our team</p>
+          <p>Partner with us</p>
+          <p>FAQ</p>
+          <p>Blog</p>
+        </div>
+        <div class="col-sm-2">
+          <h1>Support</h1>
+          <p class="mt-4">Account</p>
+          <p>Support center</p>
+          <p>Feedback</p>
+          <p>Contact us</p>
+          <p>Accesbility</p>
+        </div>
+        <div class="col-sm-2">
+          <h1>Get in Touch</h1>
+          <p class="mt-4">Have a question or a feedback?</p>
+          <p>We'd love to hear from you</p>
+          <div class="header-socials">
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

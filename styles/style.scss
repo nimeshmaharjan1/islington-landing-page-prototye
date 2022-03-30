@@ -26,6 +26,7 @@ header {
   nav {
     .title {
       h1 {
+        cursor: pointer;
         font-family: var(--heading-font) !important;
         font-weight: 800;
         font-size: 1.5rem;
@@ -33,17 +34,40 @@ header {
       }
     }
     .navigation {
-      .d-flex {
-        gap: 4rem;
-        h2 {
+      .nav-items {
+        a {
           font-size: 1rem;
           font-family: var(--body-font);
-          font-weight: bold;
           color: var(--bg-color);
+          margin-right: 2.2rem;
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          position: relative;
+          z-index: 0;
+          cursor: pointer;
+          &:hover {
+            color: black !important;
+          }
+        }
+        a::before {
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          left: 0px;
+          bottom: 0px;
+          content: "";
+          background: var(--bg-color);
+          opacity: 0.3;
+          transition: all 0.3s;
+          color: white;
+        }
+        a:hover::before {
+          height: 100%;
         }
       }
     }
     .search-icon {
+      cursor: pointer;
       .d-flex {
         gap: 2rem;
         i {
@@ -60,11 +84,44 @@ header {
 .hero-section {
   height: 100vh;
   position: relative;
-  img {
+  .mySlides img {
     height: 35rem;
     width: 60vw;
-    object-fit: cover;
     border-radius: var(--radius);
+  }
+  .controls {
+    position: absolute;
+    right: 13rem;
+    top: 11rem;
+    transform: rotate(90deg);
+    font-size: 1rem;
+    cursor: pointer;
+    a {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--bg-color);
+    }
+  }
+  .controls-number {
+    position: absolute;
+    right: 14.7rem;
+    top: 19rem;
+    font-size: 1rem;
+    font-family: var(--body-font);
+    font-weight: bold;
+    color: var(--bg-color);
+    cursor: pointer;
+    .number-one::after {
+      content: "";
+      display: block;
+      width: 2rem;
+      height: 2px;
+      top: 1.5rem;
+      left: -0.25rem;
+      background: var(--bg-color);
+      transform: rotate(90deg);
+      position: relative;
+    }
   }
   .hero-description {
     border-radius: 0 0.5rem 0.5rem 0;
@@ -92,17 +149,6 @@ header {
     right: 17rem;
     color: white;
     background: var(--bg-color);
-    &::after {
-      content: "Scroll Down";
-      font-size: 1.1rem;
-      display: block;
-      width: 130px;
-      color: var(--bg-color);
-      transform: rotate(90deg);
-      left: 10rem;
-      top: 0;
-      position: absolute;
-    }
     i {
       font-size: 2rem;
     }
@@ -186,8 +232,6 @@ header {
   cursor: pointer;
   outline: none;
   margin: 1em 0.8em;
-  //Effect three
-  // Effect one
   &.outline::after,
   &.outline::before {
     content: "";
@@ -226,5 +270,170 @@ header {
     border-left-color: var(--bg-color);
     width: 100%;
     height: 100%;
+  }
+}
+.mySlides {
+  display: none;
+  margin: auto;
+  width: 60%;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.stepper-section {
+  img {
+    height: 45rem;
+    width: 35vw;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: rgba (0, 0, 0, var(--bg-color));
+  }
+  h1 {
+    @include heading-tag();
+  }
+  .cirlce {
+    background: var(--bg-color);
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    h2 {
+      font-family: var(--body-font);
+      color: white;
+      font-size: 1.5rem;
+      padding-top: 1.3rem !important;
+    }
+  }
+  .brief,
+  .brief-two {
+    h1 {
+      font-size: 1.8rem !important;
+      font-family: var(--body-font);
+      font-weight: 700;
+    }
+  }
+}
+.brief-paragraph {
+  margin: 1rem 0 !important;
+  font-family: var(--body-font);
+  .line {
+    border: 1px solid var(--bg-color);
+    transform: rotate(90deg);
+  }
+}
+
+.testimonial-section {
+  h1 {
+    @include heading-tag();
+  }
+  i {
+    font-size: 2.5rem;
+    color: var(--bg-color);
+  }
+}
+
+.testimonial {
+  .card {
+    background-color: var(--bg-color);
+    color: white;
+    h1 {
+      font-family: "Secular One", sans-serif;
+      font-size: 120px !important;
+    }
+    h2 {
+      font-family: var(--heading-font);
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-top: -4rem;
+      line-height: 1.9em;
+    }
+    h3 {
+      font-family: var(--body-font);
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    h4 {
+      font-family: var(--body-font);
+      font-size: 1rem;
+    }
+  }
+}
+.subscription-section {
+  h1 {
+    @include heading-tag();
+  }
+  p {
+    font-family: var(--body-font);
+  }
+}
+
+footer {
+  position: relative;
+  background: var(--bg-color);
+  .subscribe-wrapper {
+    position: absolute;
+    top: -2.4rem;
+    left: 27%;
+    box-shadow: 0 4px 20px -2px #b6b6b6;
+    button {
+      margin-left: -11rem;
+      background: var(--bg-color);
+      border: none;
+      color: #fdfdfe;
+    }
+    input {
+      width: 45vw;
+      border: none;
+      &::-webkit-input-placeholder {
+        font-family: var(--body-font);
+      }
+      &:focus {
+        outline: none !important;
+        box-shadow: 0 4px 20px -2px #b6b6b6;
+      }
+    }
+  }
+  h1 {
+    color: white !important;
+    font-family: var(--heading-font) !important;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+  p {
+    font-family: var(--body-font);
+    color: white;
+    line-height: 1.9em;
+    opacity: 0.7;
+  }
+  .header-socials {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    i {
+      font-size: 2rem;
+      color: white !important;
+      opacity: 0.4;
+      transition: all 0.5s;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }

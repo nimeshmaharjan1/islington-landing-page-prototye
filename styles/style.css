@@ -22,21 +22,49 @@ html ::-webkit-scrollbar {
 }
 
 header nav .title h1 {
+  cursor: pointer;
   font-family: var(--heading-font) !important;
   font-weight: 800;
   font-size: 1.5rem;
   color: var(--bg-color);
 }
 
-header nav .navigation .d-flex {
-  gap: 4rem;
-}
-
-header nav .navigation .d-flex h2 {
+header nav .navigation .nav-items a {
   font-size: 1rem;
   font-family: var(--body-font);
-  font-weight: bold;
   color: var(--bg-color);
+  margin-right: 2.2rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+
+header nav .navigation .nav-items a:hover {
+  color: black !important;
+}
+
+header nav .navigation .nav-items a::before {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0px;
+  bottom: 0px;
+  content: "";
+  background: var(--bg-color);
+  opacity: 0.3;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: white;
+}
+
+header nav .navigation .nav-items a:hover::before {
+  height: 100%;
+}
+
+header nav .search-icon {
+  cursor: pointer;
 }
 
 header nav .search-icon .d-flex {
@@ -57,12 +85,50 @@ header nav .search-icon .d-flex :nth-child(2) {
   position: relative;
 }
 
-.hero-section img {
+.hero-section .mySlides img {
   height: 35rem;
   width: 60vw;
-  -o-object-fit: cover;
-     object-fit: cover;
   border-radius: var(--radius);
+}
+
+.hero-section .controls {
+  position: absolute;
+  right: 13rem;
+  top: 11rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hero-section .controls a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--bg-color);
+}
+
+.hero-section .controls-number {
+  position: absolute;
+  right: 14.7rem;
+  top: 19rem;
+  font-size: 1rem;
+  font-family: var(--body-font);
+  font-weight: bold;
+  color: var(--bg-color);
+  cursor: pointer;
+}
+
+.hero-section .controls-number .number-one::after {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2px;
+  top: 1.5rem;
+  left: -0.25rem;
+  background: var(--bg-color);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: relative;
 }
 
 .hero-section .hero-description {
@@ -98,19 +164,6 @@ header nav .search-icon .d-flex :nth-child(2) {
   right: 17rem;
   color: white;
   background: var(--bg-color);
-}
-
-.hero-section .scroll-down::after {
-  content: "Scroll Down";
-  font-size: 1.1rem;
-  display: block;
-  width: 130px;
-  color: var(--bg-color);
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  left: 10rem;
-  top: 0;
-  position: absolute;
 }
 
 .hero-section .scroll-down i {
@@ -250,5 +303,212 @@ header nav .search-icon .d-flex :nth-child(2) {
   border-left-color: var(--bg-color);
   width: 100%;
   height: 100%;
+}
+
+.mySlides {
+  display: none;
+  margin: auto;
+  width: 60%;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.stepper-section img {
+  height: 45rem;
+  width: 35vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--radius);
+  -webkit-box-shadow: rgba 0, 0, 0, var(--bg-color);
+          box-shadow: rgba 0, 0, 0, var(--bg-color);
+}
+
+.stepper-section h1 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.6em;
+  font-size: 2.5rem !important;
+}
+
+.stepper-section .cirlce {
+  background: var(--bg-color);
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+}
+
+.stepper-section .cirlce h2 {
+  font-family: var(--body-font);
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 1.3rem !important;
+}
+
+.stepper-section .brief h1,
+.stepper-section .brief-two h1 {
+  font-size: 1.8rem !important;
+  font-family: var(--body-font);
+  font-weight: 700;
+}
+
+.brief-paragraph {
+  margin: 1rem 0 !important;
+  font-family: var(--body-font);
+}
+
+.brief-paragraph .line {
+  border: 1px solid var(--bg-color);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.testimonial-section h1 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.6em;
+  font-size: 2.5rem !important;
+}
+
+.testimonial-section i {
+  font-size: 2.5rem;
+  color: var(--bg-color);
+}
+
+.testimonial .card {
+  background-color: var(--bg-color);
+  color: white;
+}
+
+.testimonial .card h1 {
+  font-family: "Secular One", sans-serif;
+  font-size: 120px !important;
+}
+
+.testimonial .card h2 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: -4rem;
+  line-height: 1.9em;
+}
+
+.testimonial .card h3 {
+  font-family: var(--body-font);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.testimonial .card h4 {
+  font-family: var(--body-font);
+  font-size: 1rem;
+}
+
+.subscription-section h1 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.6em;
+  font-size: 2.5rem !important;
+}
+
+.subscription-section p {
+  font-family: var(--body-font);
+}
+
+footer {
+  position: relative;
+  background: var(--bg-color);
+}
+
+footer .subscribe-wrapper {
+  position: absolute;
+  top: -2.4rem;
+  left: 27%;
+  -webkit-box-shadow: 0 4px 20px -2px #b6b6b6;
+          box-shadow: 0 4px 20px -2px #b6b6b6;
+}
+
+footer .subscribe-wrapper button {
+  margin-left: -11rem;
+  background: var(--bg-color);
+  border: none;
+  color: #fdfdfe;
+}
+
+footer .subscribe-wrapper input {
+  width: 45vw;
+  border: none;
+}
+
+footer .subscribe-wrapper input::-webkit-input-placeholder {
+  font-family: var(--body-font);
+}
+
+footer .subscribe-wrapper input:focus {
+  outline: none !important;
+  -webkit-box-shadow: 0 4px 20px -2px #b6b6b6;
+          box-shadow: 0 4px 20px -2px #b6b6b6;
+}
+
+footer h1 {
+  color: white !important;
+  font-family: var(--heading-font) !important;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+footer p {
+  font-family: var(--body-font);
+  color: white;
+  line-height: 1.9em;
+  opacity: 0.7;
+}
+
+footer .header-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.8rem;
+}
+
+footer .header-socials i {
+  font-size: 2rem;
+  color: white !important;
+  opacity: 0.4;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+footer .header-socials i:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
