@@ -19,6 +19,12 @@ html ::-webkit-scrollbar {
   --body-font: "Montserrat", sans-serif !important;
   --bg-color: #5a6e79;
   --radius: 0.5rem;
+  --nav-load-time: 0.4s;
+}
+
+header nav {
+  -webkit-animation: nav-load var(--nav-load-time) ease-in;
+          animation: nav-load var(--nav-load-time) ease-in;
 }
 
 header nav .title h1 {
@@ -80,6 +86,28 @@ header nav .search-icon .d-flex :nth-child(2) {
   font-size: 2.2rem;
 }
 
+@-webkit-keyframes nav-load {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes nav-load {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .hero-section {
   height: 100vh;
   position: relative;
@@ -139,6 +167,18 @@ header nav .search-icon .d-flex :nth-child(2) {
   background: var(--bg-color);
   color: #fdfdfe;
   width: 35rem;
+  -webkit-animation-name: description-load;
+          animation-name: description-load;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-delay: var(--nav-load-time);
+          animation-delay: var(--nav-load-time);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .hero-section .hero-description .description {
@@ -179,6 +219,28 @@ header nav .search-icon .d-flex :nth-child(2) {
   border-radius: 0.4rem;
   width: 6rem;
   height: 6rem;
+}
+
+@-webkit-keyframes description-load {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes description-load {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .services {
@@ -510,5 +572,31 @@ footer .header-socials i {
 
 footer .header-socials i:hover {
   opacity: 1;
+}
+
+.scroll-to-top {
+  position: fixed;
+  color: black;
+  bottom: 1rem;
+  right: 1.2rem;
+  z-index: 99;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.scroll-to-top:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.scroll-to-top i {
+  font-size: 2rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.scroll-to-top i:hover {
+  color: #51c4e0;
 }
 /*# sourceMappingURL=style.css.map */

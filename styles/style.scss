@@ -15,6 +15,7 @@ html {
   --body-font: "Montserrat", sans-serif !important;
   --bg-color: #5a6e79;
   --radius: 0.5rem;
+  --nav-load-time: 0.4s;
 }
 @mixin heading-tag {
   font-family: var(--heading-font);
@@ -24,6 +25,7 @@ html {
 }
 header {
   nav {
+    animation: nav-load var(--nav-load-time) ease-in;
     .title {
       h1 {
         cursor: pointer;
@@ -81,6 +83,14 @@ header {
     }
   }
 }
+@keyframes nav-load {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .hero-section {
   height: 100vh;
   position: relative;
@@ -131,6 +141,12 @@ header {
     background: var(--bg-color);
     color: #fdfdfe;
     width: 35rem;
+    animation-name: description-load;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-delay: var(--nav-load-time);
+    animation-fill-mode: forwards;
+    transform: translateX(-100%);
     .description {
       text-align: left;
       padding-left: 7rem;
@@ -162,6 +178,14 @@ header {
     border-radius: 0.4rem;
     width: 6rem;
     height: 6rem;
+  }
+}
+@keyframes description-load {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -434,6 +458,25 @@ footer {
       &:hover {
         opacity: 1;
       }
+    }
+  }
+}
+.scroll-to-top {
+  position: fixed;
+  color: black;
+  bottom: 1rem;
+  right: 1.2rem;
+  z-index: 99;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    transform: translateY(-10px);
+  }
+  i {
+    font-size: 2rem;
+    transition: all 0.5s;
+    &:hover {
+      color: rgb(81, 196, 224);
     }
   }
 }

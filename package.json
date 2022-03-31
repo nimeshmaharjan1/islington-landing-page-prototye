@@ -1,0 +1,26 @@
+{
+  "name": "landing-page-prototye",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap-icons": "^1.8.1",
+    "sass": "^1.49.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimeshmaharjan1/islington-landing-page-prototye.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nimeshmaharjan1/islington-landing-page-prototye/issues"
+  },
+  "homepage": "https://github.com/nimeshmaharjan1/islington-landing-page-prototye#readme"
+}
