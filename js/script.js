@@ -8,6 +8,7 @@ const stepper = document.querySelector(".stepper");
 const thirdImage = document.querySelector(".third-image");
 const bestExperience = document.querySelector(".best-experience");
 const processHeading = document.querySelector(".process-heading");
+const subscribeInput = document.querySelector(".subscribe-wrapper");
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -65,6 +66,9 @@ const scrollDisplay = () => {
   if (scrollTopValue > 2721) {
     testimonialOne.classList.add("animate__slideInLeft");
     testimonialTwo.classList.add("animate__slideInRight");
+  }
+  if (scrollTopValue > 3551) {
+    subscribeInput.classList.add("animate__rotateInUpRight");
   }
 };
 
