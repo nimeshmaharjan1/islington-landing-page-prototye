@@ -41,7 +41,6 @@ scrollUpIcon.addEventListener("click", () => {
 
 const scrollDisplay = () => {
   let scrollTopValue = document.documentElement.scrollTop;
-  console.log(scrollTopValue);
   document.body.scrollTop > 600 || scrollTopValue > 600
     ? (scrollUpIcon.style.display = "block")
     : (scrollUpIcon.style.display = "none");
